@@ -1,0 +1,14 @@
+.fade_in_top{-webkit-animation-name:fade_in_top;animation-name:fade_in_top;transition:all 0.3s ease-out;}
+@-webkit-keyframes fade_in_top{from{-webkit-transform:translateY(30%);transform:translateY(30%);}
+to{-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+@keyframes fade_in_top{from{-webkit-transform:translateY(30%);transform:translateY(30%);}
+to{-webkit-transform:translateY(0%);transform:translateY(0%);}
+}
+.fade_in_left{-webkit-animation-name:fade_in_left;animation-name:fade_in_left;transition:all 0.3s ease-out;}
+@-webkit-keyframes fade_in_left{from{-webkit-transform:translateX(-10%);transform:translateX(-10%);}
+to{-webkit-transform:translateX(0%);transform:translateX(0%);}
+}
+@keyframes fade_in_left{from{-webkit-transform:translateX(-10%);transform:translateX(-10%);}
+to{-webkit-transform:translateX(0%);transform:translateX(0%);}
+}
