@@ -7,6 +7,18 @@ Project: painter Template
 
 -------------------------------------------------------------------*/
 
+$(document).ready(function(){
+    $("#backColor").on({    
+        mouseenter: function(){
+			let color = document.getElementById('head').value;
+            $(this).css("background-color", color);
+        }
+    });
+});
+      
+    
+
+
 (function ($) {
 	"use strict";
 	var painter = {

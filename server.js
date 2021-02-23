@@ -41,6 +41,12 @@ app.get('/Contact', (req,res) => {
     res.render('contact',{title: 'Contact Me'});
 });
 
+app.post('/', function(req, re){
+    let color = document.getElementById('backColor').value;
+    console.log(color);
+    re.send(`Background Color is: ${req.body.value}`);
+
+});
 
 // #4 Page - Not Found
 app.get("*", (req,res) => {
