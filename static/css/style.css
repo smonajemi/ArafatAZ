@@ -42,7 +42,7 @@ a:hover, a:focus{
     border-color: inherit;
 }
 ::selection {
-    background: #fc4d36;
+    background: #CCD4BF;
     color: #fff;
 }
 
@@ -152,7 +152,7 @@ a:hover, a:focus{
     border: none;
     border-radius: 30px;
     padding: 0 30px;
-    background: linear-gradient(274deg, #de2574 0%, #fc4d36 100%);
+    background: linear-gradient(274deg, #de2574 0%, #CCD4BF 100%);
     box-shadow: none;
     text-shadow: none;
     text-decoration: none !important;
@@ -164,7 +164,7 @@ a:hover, a:focus{
 }
 .temp_btn:hover,.temp_btn:focus{
 	color:#ffffff;
-	background: linear-gradient(274deg, #fc4d36 0%, #de2574 100%);
+	background: linear-gradient(274deg, #CCD4BF 0%, #de2574 100%);
 }
 .left{
 	float:left;
@@ -308,7 +308,7 @@ ul.social_icon>li:last-child{
 }
 
 .top_header {
-    background: linear-gradient(274deg, #fc4d36 0%, #de2574 100%);
+    background: linear-gradient(274deg, #CCD4BF 0%, #de2574 100%);
     padding: 15px 100px;
 }
 .logo a{
@@ -423,7 +423,7 @@ ul.social_icon>li:last-child{
     overflow: hidden;
 }
 .temp_banner_slider .p_banner1 h1 span {
-	color:#fc4d36;
+	color:#CCD4BF;
 }
 .temp_banner_slider .p_banner1 h1:after {
     content: '';
@@ -431,7 +431,7 @@ ul.social_icon>li:last-child{
     bottom: -12px;
     left: 0;
     right: 0;
-    background: #fc4d36;
+    background: #CCD4BF;
     width: 120px;
     height: 5px;
     margin: auto;
@@ -1325,14 +1325,14 @@ svg.svg_border2.color_gryF  path{
 }
 .temp_contact_form_right li i {
     padding-right: 15px;
-    color: #fc4d36;
+    color: #CCD4BF;
 	font-size: 18px;
 }
 .temp_contact_form_right li a{
     transition:0.3s;
 }
 .temp_contact_form_right li a:hover{
-    color: #fc4d36;
+    color: #CCD4BF;
 }
 .temp_getintouch_wrapper .form-group{
 	padding-bottom:15px;
@@ -1395,7 +1395,7 @@ svg.svg_border2.color_gryF  path{
 	line-height: 24px;
 }
 .temp_copyright a{
-	color:#fc4d36;
+	color:#CCD4BF;
 }
 .temp_footer_Section ul {
     padding-left:0;
@@ -1480,7 +1480,7 @@ svg.svg_border2.color_gryF  path{
 }
 .footer_section.sec4.bottompadder60 li i{
     padding-right:10px;
-	color: #fc4d36;
+	color: #CCD4BF;
 }
 /***************************************
 12. footer end
@@ -1650,7 +1650,7 @@ li.breadcrumb-item.active .paragraph {
     outline: none;
     border: none;
     border-radius: 3px;
-    background: linear-gradient(274deg, #de2574 0%, #fc4d36 100%);
+    background: linear-gradient(274deg, #de2574 0%, #CCD4BF 100%);
     box-shadow: none;
     text-shadow: none;
     text-decoration: none !important;
@@ -1693,7 +1693,7 @@ li.breadcrumb-item.active .paragraph {
 	right:0;
 	top:0;
 	bottom:100%;
-	background:linear-gradient(274deg, #de2574 0%, #fc4d36 100%);
+	background:linear-gradient(274deg, #de2574 0%, #CCD4BF 100%);
 	z-index:-1;
 	transition: all 0.3s ease-in;
     -webkit-transition: all 0.3s ease-in;
@@ -1752,7 +1752,7 @@ li.breadcrumb-item.active .paragraph {
 	right:50%;
 	top:0;
 	bottom:0;
-	background:linear-gradient(274deg, #de2574 0%, #fc4d36 100%);
+	background:linear-gradient(274deg, #de2574 0%, #CCD4BF 100%);
 	border-radius:50px !Important;
 	z-index:-1;
 	transition: all 0.3s ease-in;
@@ -2737,7 +2737,7 @@ tbody tr td{
 		top: 0;
 		margin:0;
 		max-width: 300px;
-		background:linear-gradient(150deg, #de2574 0%, #fc4d36 100%);
+		background:linear-gradient(150deg, #de2574 0%, #CCD4BF 100%);
 		transition:all 0.3s ease-in;
 		-webkit-transition:all 0.3s ease-in;
 		-moz-transition:all 0.3s ease-in;
