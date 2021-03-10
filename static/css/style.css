@@ -294,11 +294,13 @@ ul.social_icon>li:last-child{
 	position:relative;
 }
 .banner_main_bg{
-	background-image:url("/images/pain.png");
-	background-position:right;
+	background-image:url("/images/test.jpg");
+	background-position:center;
 	background-repeat:no-repeat;
 	background-size: auto;
 	height:950px;
+	opacity: 0.5;
+
 }
 
 .temp_banner_wrapper .container-fluid {
