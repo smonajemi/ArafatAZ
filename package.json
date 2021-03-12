@@ -1,17 +1,27 @@
 {
-  "name": "projectarafat",
+  "name": "newfile",
   "version": "1.0.0",
-  "description": "Arafat Az",
+  "engines": {
+    "node": "12.11.1"
+  },
+  "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "Sina M",
+  "author": "Sina Monajemi",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "client-sessions": "^0.8.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
+    "express-handlebars": "^5.2.0",
+    "mongoose": "^5.11.13",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.17",
+    "request": "^2.88.2",
     "update": "^0.7.4"
   },
   "devDependencies": {
