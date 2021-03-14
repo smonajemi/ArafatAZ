@@ -130,7 +130,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   padding: 20px 0;
-  background: #fff;
+  background: rgb(243, 246, 246);
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
@@ -141,13 +141,14 @@ h6 {
 }
 
 #header .logo h1 {
-  font-size: 36px;
+  font-size: 360px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+
 }
 
 #header .logo h1 a,
@@ -157,9 +158,9 @@ h6 {
 }
 
 #header .logo img {
-  padding: 0;
-  margin: 7px 0;
-  max-height: 26px;
+  float:left;
+  margin: 2px 10px;
+  max-height: 100px;
 }
 
 .main-pages {
@@ -176,7 +177,7 @@ h6 {
   /* background: url("../img/intro-bg.png") center bottom no-repeat; */
   background-size: cover;
   padding: 200px 0 120px 0;
-  background-color: #A9C8C0;
+  background-color: #60ca5c;
   border-bottom-left-radius: 200px;
   border-bottom-right-radius: 200px;
   border-radius: 30%;
@@ -292,7 +293,7 @@ h6 {
   opacity: 0;
   visibility: hidden;
   padding: 10px 0;
-  background: #fff;
+  background: #faf3e0;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: ease all 0.3s;
 }
@@ -860,7 +861,7 @@ h6 {
 }
 
 #portfolio .portfolio-item .portfolio-wrap:hover {
-  background: #003166;
+  background: #faf3e0;
 }
 
 #portfolio .portfolio-item .portfolio-wrap:hover .portfolio-info {
