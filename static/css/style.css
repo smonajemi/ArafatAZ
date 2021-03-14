@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  color: #F4B9B8;
+  color: #2d3758;
   transition: 0.5s;
 }
 
@@ -50,7 +50,7 @@ h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #F4B9B8;
+  background: #A9C8C0;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -88,7 +88,7 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #F4B9B8;
+  border-top: 6px solid #A9C8C0;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -176,7 +176,7 @@ h6 {
   /* background: url("../img/intro-bg.png") center bottom no-repeat; */
   background-size: cover;
   padding: 200px 0 120px 0;
-  background-color: rgb(186, 248, 186);
+  background-color: #A9C8C0;
   border-bottom-left-radius: 200px;
   border-bottom-right-radius: 200px;
   border-radius: 30%;
@@ -201,7 +201,7 @@ h6 {
 }
 
 #intro .intro-info h2 span {
-  color: #FDFD96;
+  color: #F7CE76;
   text-decoration: underline;
 }
 
@@ -220,8 +220,8 @@ h6 {
 }
 
 #intro .intro-info .btn-get-started {
-  background: ;
-  border: 2px solid #F4B9B8;
+  background: #A9C8C0;
+  border: 2px solid #A9C8C0;
   color: #fff;
 }
 
@@ -236,8 +236,8 @@ h6 {
 }
 
 #intro .intro-info .btn-services:hover {
-  background: #F4B9B8;
-  border-color: #F4B9B8;
+  background: #A9C8C0;
+  border-color: #A9C8C0;
   color: #fff;
 }
 
@@ -268,7 +268,7 @@ h6 {
 .main-nav a {
   display: block;
   position: relative;
-  color: #004289;
+  color: #AE8A8C;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
@@ -279,7 +279,7 @@ h6 {
 .main-nav a:hover,
 .main-nav .active > a,
 .main-nav li:hover > a {
-  color: #F4B9B8;
+  color: #000201;
   text-decoration: none;
 }
 
@@ -311,13 +311,13 @@ h6 {
 .main-nav .drop-down ul a {
   padding: 10px 20px;
   font-size: 13px;
-  color: #004289;
+  color: #AE8A8C;
 }
 
 .main-nav .drop-down ul a:hover,
 .main-nav .drop-down ul .active > a,
 .main-nav .drop-down ul li:hover > a {
-  color: #F4B9B8;
+  color: #A9C8C0;
 }
 
 .main-nav .drop-down > a:after {
@@ -425,7 +425,7 @@ h6 {
 
 .mobile-nav-toggle i {
   margin: 18px 18px 0 0;
-  color: #004289;
+  color: #AE8A8C;
 }
 
 .mobile-nav-overly {
@@ -543,17 +543,17 @@ h6 {
   flex-direction: column;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid #F4B9B8;
+  border: 2px solid #A9C8C0;
   transition: all 0.3s ease-in-out;
 }
 
 #about .about-container .icon-box .icon i {
-  color: #F4B9B8;
+  color: #A9C8C0;
   font-size: 24px;
 }
 
 #about .about-container .icon-box:hover .icon {
-  background: #F4B9B8;
+  background: #F7CE76;
 }
 
 #about .about-container .icon-box:hover .icon i {
@@ -634,7 +634,7 @@ h6 {
 }
 
 #services .box:hover .title a {
-  color: #F4B9B8;
+  color: #A9C8C0;
 }
 
 #services .description {
@@ -741,7 +741,7 @@ h6 {
   padding: 6px 20px;
   font-size: 12px;
   line-height: 20px;
-  color: #F4B9B8;
+  color: #A9C8C0;
   border-radius: 50px;
   text-transform: uppercase;
   background: #ecf5ff;
@@ -751,7 +751,7 @@ h6 {
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-  background: #F4B9B8;
+  background: #A9C8C0;
   color: #fff;
 }
 
@@ -818,7 +818,7 @@ h6 {
 }
 
 #portfolio .portfolio-item .portfolio-wrap .portfolio-info h4 a:hover {
-  color: #F4B9B8;
+  color: #A9C8C0;
 }
 
 #portfolio .portfolio-item .portfolio-wrap .portfolio-info p {
@@ -837,7 +837,7 @@ h6 {
   text-align: center;
   width: 36px;
   height: 36px;
-  background: #F4B9B8;
+  background: #A9C8C0;
   border-radius: 50%;
   margin: 10px 4px 0 4px;
 }
@@ -922,7 +922,7 @@ h6 {
 }
 
 #testimonials .owl-dot.active {
-  background-color: #F4B9B8;
+  background-color: #A9C8C0;
 }
 
 /* Team Section
@@ -1004,7 +1004,7 @@ h6 {
 }
 
 #team .member .social a:hover {
-  color: #F4B9B8;
+  color: #A9C8C0;
 }
 
 #team .member .social i {
@@ -1078,7 +1078,7 @@ h6 {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #F4B9B8;
+  color: #A9C8C0;
 }
 
 #contact .contact-about p {
@@ -1096,7 +1096,7 @@ h6 {
   font-size: 18px;
   display: inline-block;
   background: #fff;
-  color: #F4B9B8;
+  color: #A9C8C0;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1105,11 +1105,11 @@ h6 {
   width: 36px;
   height: 36px;
   transition: 0.3s;
-  border: 1px solid #F4B9B8;
+  border: 1px solid #A9C8C0;
 }
 
 #contact .social-links a:hover {
-  background: #F4B9B8;
+  background: #A9C8C0;
   color: #fff;
 }
 
@@ -1119,7 +1119,7 @@ h6 {
 
 #contact .info i {
   font-size: 32px;
-  color: #F4B9B8;
+  color: #A9C8C0;
   float: left;
   line-height: 1;
 }
@@ -1129,10 +1129,14 @@ h6 {
   line-height: 28px;
   font-size: 14px;
 }
+#socialLinks{
+  text-align: center;
+  padding: 1%;
 
+}
 #contact .form #sendmessage {
-  color: #F4B9B8;
-  border: 1px solid #F4B9B8;
+  color: #A9C8C0;
+  border: 1px solid #A9C8C0;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1172,7 +1176,7 @@ h6 {
 }
 
 #contact .form button[type="submit"] {
-  background: #F4B9B8;
+  background: #A9C8C0;
   border: 0;
   border-radius: 20px;
   padding: 8px 30px;
@@ -1181,7 +1185,7 @@ h6 {
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #0067d5;
+  background: #DBBC8E;
   cursor: pointer;
 }
 
@@ -1190,14 +1194,14 @@ h6 {
 --------------------------------------------------------------*/
 
 #footer {
-  background: rgb(186, 248, 186);
+  background: #A9C8C0;
   padding: 0 0 30px 0;
   color: #eee;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #004a99;
+  background: #DBBC8E;
   padding: 60px 0 30px 0;
 }
 
@@ -1211,7 +1215,7 @@ h6 {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
-  color: #fff;
+  color: #DBBC8E;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -1222,13 +1226,13 @@ h6 {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
-  color: #ecf5ff;
+  color: #DBBC8E;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #F4B9B8;
+  background: #A9C8C0;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1241,7 +1245,7 @@ h6 {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #0067d5;
+  background: #F7CE76;
   color: #fff;
 }
 
@@ -1299,7 +1303,7 @@ h6 {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"] {
-  background: #F4B9B8;
+  background: #A9C8C0;
   border: 0;
   width: 35%;
   padding: 6px 0;
@@ -1309,9 +1313,7 @@ h6 {
   cursor: pointer;
 }
 
-#footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #0062cc;
-}
+
 
 #footer .copyright {
   text-align: center;
@@ -1321,11 +1323,11 @@ h6 {
 #footer .credits {
   text-align: center;
   font-size: 13px;
-  color: #f1f7ff;
+  color: #37667E;
 }
 
 #footer .credits a {
-  color: #bfddfe;
+  color: #37667E;
 }
 
 #footer .credits a:hover {
