@@ -1,4 +1,4 @@
-/* table { 
+table { 
   margin: 0 auto; 
   font-size: large; 
   border: 1px solid black; 
@@ -14,26 +14,9 @@ h1 {
 } 
 
 td,tr { 
-  background-color: white;
+
   border: 1px solid black; 
 } 
-
-th, 
-td { 
-  font-weight: bold; 
-  border: 1px solid black; 
-  padding: 10px; 
-  text-align: center; 
-} 
-
-td { 
-  font-weight: lighter; 
-} 
-
-
-div {
-  padding: 50px;
-}
 
 h1 {
   text-align: center;
@@ -53,18 +36,19 @@ a {
 }
 
 #addname{
-  padding-left:10%;
+  margin-bottom:10%;
 }
 
+
 html {
-  color: #fff;
+ 
   border: none;
   padding: 10px 20px;
   display: inline-block;
   text-decoration: none;
   font: bold 18px sans-serif;
 
-} */
+}
 
 
 

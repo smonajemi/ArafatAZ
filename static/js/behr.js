@@ -23512,7 +23512,7 @@ function myFunction(arr) {
   }
 
   
-  document.getElementById("allColors").innerHTML = "<td id='addname' </td> <br> <td id='addlabel'</td> <br> <td id='addhex' </td> <br> <td id='addcolor'</td>" ;
+  document.getElementById("allColors").innerHTML = "<td id='addname' </td> <br> <td id='addlabel'</td> <br> <td id='addcolor'</td>" ;
   for(i = 0; i < arr.length; i++) {	
 	var inpt = document.createElement("input");
 	var brk = document.createElement("br");
