@@ -23507,7 +23507,7 @@ function myFunction(arr) {
   for(i = 0; i < arr.length; i++) {	
 	name += arr[i].name + '<br>';
 	label += arr[i].label + '<br>';
-	hex += arr[i].hex + '<br>';
+	// // hex += arr[i].hex + '<br>';
 	colors += arr[i].hex + '<br>';	 
   }
 
@@ -23516,16 +23516,27 @@ function myFunction(arr) {
   for(i = 0; i < arr.length; i++) {	
 	var inpt = document.createElement("input");
 	var brk = document.createElement("br");
-	inpt.id='coo';
+	inpt.id = 'coo';	
+	inpt.type = "click";
+	inpt.value = arr[i].hex;
+	inpt.setAttribute('readonly', 'true');
+	inpt.style.cursor='pointer';
 	inpt.style.background = arr[i].hex;
-
+			
 	document.getElementById('addcolor').appendChild(inpt);
 	document.getElementById('addcolor').appendChild(brk);
+	
   }
-
+  	
+	// // BtnEle.addEventListener('click',() =>{
+	// // 	var vals = document.querySelector(this).value;
+	// // 	alert(vals);
+	// // })
+	
+ 
   document.getElementById("addname").innerHTML = name;
   document.getElementById("addlabel").innerHTML = label;
-  document.getElementById("addhex").innerHTML = hex;
-
+// //   document.getElementById("addhex").innerHTML = hex;
 }
+             
 
