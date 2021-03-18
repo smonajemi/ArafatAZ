@@ -23545,6 +23545,8 @@ function myFunction(arr) {
 	inpt3.setAttribute('readonly', 'true');
 	inpt3.style.cursor='pointer';
 	inpt3.style.background = arr[i].hex;
+	inpt3.style.color = arr[i].hex;
+
 	document.getElementById('addcolor').appendChild(inpt3).innerHTML = arr[i].hex;
 	document.getElementById('addcolor').appendChild(line3);
   }
