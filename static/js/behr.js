@@ -23512,20 +23512,41 @@ function myFunction(arr) {
   }
 
   
-  document.getElementById("allColors").innerHTML = "<td id='addname' </td> <br> <td id='addlabel'</td> <br> <td id='addcolor'</td>" ;
+  document.getElementById("allColors").innerHTML = "<td id='addname' </td> <br> <td id='addlabel'</td> <br> <td id='addcolor'</td> <br>" ;
   for(i = 0; i < arr.length; i++) {	
-	var inpt = document.createElement("input");
-	var brk = document.createElement("br");
-	inpt.id = 'coo';	
-	inpt.type = "click";
-	inpt.value = arr[i].hex;
-	inpt.setAttribute('readonly', 'true');
-	inpt.style.cursor='pointer';
-	inpt.style.background = arr[i].hex;
-			
-	document.getElementById('addcolor').appendChild(inpt);
-	document.getElementById('addcolor').appendChild(brk);
 	
+	// NAME
+	var inpt1 = document.createElement("p");
+	var brk1 = document.createElement("br");
+	var line1 = document.createElement("hr");
+	inpt1.id = 'cool';	
+	inpt1.value = arr[i].hex;
+	inpt1.setAttribute('readonly', 'true');
+	inpt1.style.color = arr[i].hex;
+	document.getElementById('addname').appendChild(inpt1).innerHTML = arr[i].name;
+	document.getElementById('addname').appendChild(line1);	
+
+	// LABEL
+	var inpt2 = document.createElement("p");
+	var line2 = document.createElement("hr");
+	inpt2.id = 'cool2';	
+	inpt2.value = arr[i].hex;
+	inpt2.setAttribute('readonly', 'true');
+	inpt2.style.color = arr[i].hex;
+	document.getElementById('addlabel').appendChild(inpt2).innerHTML = arr[i].label;
+	document.getElementById('addlabel').appendChild(line2);
+
+	// COLOR
+	var inpt3 = document.createElement("p");
+	var line3 = document.createElement("hr");
+	inpt3.id = 'coo';	
+	inpt3.type = "click";
+	inpt3.value = arr[i].hex;
+	inpt3.setAttribute('readonly', 'true');
+	inpt3.style.cursor='pointer';
+	inpt3.style.background = arr[i].hex;
+	document.getElementById('addcolor').appendChild(inpt3).innerHTML = arr[i].hex;
+	document.getElementById('addcolor').appendChild(line3);
   }
   	
 	// // BtnEle.addEventListener('click',() =>{
@@ -23534,8 +23555,8 @@ function myFunction(arr) {
 	// // })
 	
  
-  document.getElementById("addname").innerHTML = name;
-  document.getElementById("addlabel").innerHTML = label;
+	//document.getElementById("addname").innerHTML = name;
+  //document.getElementById("addlabel").innerHTML = label;
 // //   document.getElementById("addhex").innerHTML = hex;
 }
              
