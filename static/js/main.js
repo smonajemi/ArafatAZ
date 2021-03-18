@@ -1,3 +1,37 @@
+// ANIMATE
+
+var width = $(window).width();
+function goRight() {
+  $("#animate").animate({
+  left: width
+}, 100000, function() {
+  setTimeout(goLeft, 0);
+});
+}
+function goLeft() {
+  $("#animate").animate({
+  left: 0
+}, 100, function() {
+   setTimeout(goRight, 0);
+});
+}
+
+setTimeout(goRight, 0);
+
+$("#animate").on('click',function(){$('#animate').stop();
+                goLeft();
+})  
+//---------------------------------
+
+
+
+
+
+
+
+
+
+
 (function ($) {
   "use strict";
 

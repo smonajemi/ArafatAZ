@@ -43,7 +43,7 @@ app.use(clientSessions({
 
 //routing
 app.get('/',(req,res) => {
-    res.render('index',{title: 'Sina Monajemi'});
+    res.render('index',{title: 'PAINT2GO'});
 });
 
 

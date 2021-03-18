@@ -17,8 +17,6 @@
           <div class="col-lg-6">          
             <hr>
             <div class="form">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
               <form action="" method="post" role="form" class="contactForm">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
@@ -30,7 +28,7 @@
                     <div class="validation"></div>
                   </div>
                 </div>
-                  <div class="form-row">
+                <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail Address" required/>
                     <div class="validation"></div>
@@ -40,14 +38,20 @@
                     <div class="validation"></div>
                   </div>
                 </div>
-
-                <div class="form-group">
+                  <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
                 <div class="text-left">
                     <button type="reset" class="btn">Clear</button>
                     <button type="submit" id="submit" class="btn">Send</button>
+                    <hr>
+                    <input type="button" class="btn" id="add" name="add"onclick="addText()" value="Add Color Code"></input>
+                    <input type="delete" class="btn" id="remove" name="remove"onclick="removeText()" value="Delete"></input>
+                    <br><br>
+                    {{!-- <div id="addText">sina</div> --}}
+                    <ol id="addText"></ol>
+                    <br>
                 </div>
               </form>
             </div>
