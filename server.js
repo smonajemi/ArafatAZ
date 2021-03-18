@@ -15,7 +15,6 @@ const SSL_KEY_FILE = ASSETS + "server.key";
 const SSL_CRT_FILE = ASSETS + "server.crt";
 const nodemailer = require("nodemailer");
 const request = require('request');
-
 require ('./controllers/connection.js');
 // const captcha = require('./routes/captcha.js');
 const https_options = {
@@ -45,7 +44,9 @@ app.use(clientSessions({
 app.get('/',(req,res) => {
     res.render('index',{title: 'PAINT2GO'});
 });
-
+app.get('/colors',(req,res) => {
+    res.render('colors',{title: 'Colors'});
+});
 
 app.post('/', (req, res) => {
     const fname = req.body.first_name;

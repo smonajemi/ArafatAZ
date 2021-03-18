@@ -17,5 +17,3 @@ function removeText(){
         document.getElementById("remove").style.visibility="hidden";
     }
 }
-
-
