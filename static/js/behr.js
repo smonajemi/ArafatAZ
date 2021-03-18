@@ -23522,7 +23522,7 @@ function myFunction(arr) {
 	inpt1.id = 'cool';	
 	inpt1.value = arr[i].hex;
 	inpt1.setAttribute('readonly', 'true');
-	inpt1.style.color = arr[i].hex;
+	// inpt1.style.color = arr[i].hex;
 	document.getElementById('addname').appendChild(inpt1).innerHTML = arr[i].name;
 	document.getElementById('addname').appendChild(line1);	
 
