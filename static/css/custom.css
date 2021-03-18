@@ -89,6 +89,7 @@ thead th {
 tbody td {
   position: relative;
 }
+
 /* tbody td:hover:before {
   content: "";
   position: absolute;
@@ -99,4 +100,29 @@ tbody td {
   background-color: rgba(255, 255, 255, 0.2);
   z-index: -1;
 } */
+/* 
+@media (min-width: 992px) {
+ #addlabel{
+   display:none;
+ }
+}
 
+@media (max-width: 991px) {
+
+  #addlabel{
+    display:none;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  #addlabel{
+    display:none;
+  }
+}
+
+@media (max-width: 574px) {
+  #addlabel{
+    display:none;
+  }
+} */
