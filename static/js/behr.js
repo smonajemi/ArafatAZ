@@ -23512,22 +23512,32 @@ function myFunction(arr) {
   }
 
   
-  document.getElementById("allColors").innerHTML = "<td id='addname' </td> <br> <td id='addlabel'</td> <br> <td id='addcolor'</td> <br>" ;
+  document.getElementById("allColors").innerHTML = "<form class='formy'> <td id='addtag'> </td> <td id='addname' </td> <td id='addlabel'</td> <td id='addcolor'</td> </form>" ;
   for(i = 0; i < arr.length; i++) {	
-	
+
+	// Checkbox
+	var inpt = document.createElement("input");
+	var brk = document.createElement("br");
+	var line = document.createElement("hr");
+	inpt.id = "check";
+	inpt.type='checkbox';
+	document.getElementById('addtag').appendChild(inpt);
+	document.getElementById('addtag').appendChild(line);	
+
 	// NAME
-	var inpt1 = document.createElement("p");
+	var inpt1 = document.createElement("span");
 	var brk1 = document.createElement("br");
 	var line1 = document.createElement("hr");
 	inpt1.id = 'cool';	
 	inpt1.value = arr[i].hex;
 	inpt1.setAttribute('readonly', 'true');
 	////inpt1.style.color = arr[i].hex;
+
 	document.getElementById('addname').appendChild(inpt1).innerHTML = arr[i].name;
 	document.getElementById('addname').appendChild(line1);	
 
 	// LABEL
-	var inpt2 = document.createElement("p");
+	var inpt2 = document.createElement("span");
 	var line2 = document.createElement("hr");
 	inpt2.id = 'cool2';	
 	inpt2.value = arr[i].hex;
@@ -23537,9 +23547,10 @@ function myFunction(arr) {
 	document.getElementById('addlabel').appendChild(line2);
 
 	// COLOR
-	var inpt3 = document.createElement("p");
+	var inpt3 = document.createElement("span");
 	var line3 = document.createElement("hr");
 	inpt3.id = 'coo';	
+	inpt3.style.paddingRight='100px';
 	inpt3.type = "click";
 	inpt3.value = arr[i].hex;
 	inpt3.setAttribute('readonly', 'true');
