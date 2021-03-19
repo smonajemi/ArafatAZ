@@ -47091,11 +47091,9 @@ for (var i = 0; i < arr.length; i++) {
 }
 var tr,td;
 for (var i = 0; i < json.length; i++) {
-    tr = $('<tr id="addtr"/>');    
+    tr = $('<tr id="addtr"/>').css("background-color",json[i].hex);
     tr.append("<td>" + json[i].name + "</td>");
     tr.append("<td>" + json[i].label + "</td>");
-    tr.append("<td>" + json[i].hex + "</td>");
-    tr.append("<td id='addcolor'><span id='coo' style='background-color:'></span></td>").css("background-color",json[i].hex);
- 
+    tr.append("<td>" + json[i].hex + "</td>"); 
     $('table').append(tr);  
   }

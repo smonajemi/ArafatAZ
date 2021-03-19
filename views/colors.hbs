@@ -1,17 +1,42 @@
 <head >
-    <link href="css/custosm.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
-<div class="container text-center" >
-  <table class="table text-center" id="table">
-		<thead>
-			<tr>
-		
-			 <th>Behr Color Name</th>
-        	 <th>Behr Color Label</th>
-        {{!-- <th>Hex</th> --}}
-        	<th>Hex</th>
-			</tr>
-	</table>
-</div>
+
+<input type="text" id="myInput" onkeyup="mySearch()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Country</th>
+	<th style="width:40%;">Hex</th>
+  </tr>
+  <tbody>
+
+  </tbody>
+</table>
+
 </head>
 
+<script>
+function mySearch() {
+  // Declare variables
+  var input, filter, table, tr, td,td1,i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+	td1 = tr[i].getElementsByTagName("td")[2];	
+    if (td || td1) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1 || td1.innerHTML.toUpperCase().indexOf(filter) > -1 ) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>

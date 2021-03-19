@@ -1,128 +1,34 @@
-
-/* 
-@media (min-width: 992px) {
- #addlabel{
-   display:none;
- }
+* {
+  box-sizing: border-box;
 }
 
-@media (max-width: 991px) {
-
-  #addlabel{
-    display:none;
-  }
-  
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }
 
-@media (max-width: 767px) {
-  #addlabel{
-    display:none;
-  }
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
 }
 
-@media (max-width: 574px) {
-  #addlabel{
-    display:none;
-  }
-} */
-
-
-table{
-  width:100%;
-  table-layout: fixed;
-}
-
-
-@media screen and (min-width: 800px) {
-  table {
-  width: 90%;}
-}
-
-/* if the browser window is at least 1000px-s wide: */
-@media screen and (min-width: 1000px) {
-  table {
-  width: 80%;}
-}
-
-h1{
-  font-size: 30px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 300;
-  text-align: center;
-  margin-bottom: 15px;
-}
-table{
-  width:100%;
-  table-layout: fixed;
-}
-
-th{
-  padding: 20px 15px;
+#myTable th, #myTable td {
   text-align: left;
-  font-weight: 500;
-  font-size: 12px;
-  color: #fff;
-  text-transform: uppercase;
-}
-td{
-  padding: 15px;
-  text-align: left;
-  vertical-align:middle;
-  font-weight: 300;
-  font-size: 12px;
-  color: #fff;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
+  padding: 12px;
 }
 
-
-/* demo styles */
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #0e462e, #330d52);
-  background: linear-gradient(to right, #0e462e, #330d52);
-  font-family: 'Roboto', sans-serif;
-}
-section{
-  margin: 50px;
+#myTable tr {
+  border-bottom: 1px solid #ddd;
 }
 
-
-/* follow me template */
-.made-with-love {
-  margin-top: 40px;
-  padding: 10px;
-  clear: left;
-  text-align: center;
-  font-size: 10px;
-  font-family: arial;
-  color: #fff;
-}
-.made-with-love i {
-  font-style: normal;
-  color: #F50057;
-  font-size: 14px;
-  position: relative;
-  top: 2px;
-}
-.made-with-love a {
-  color: #fff;
-  text-decoration: none;
-}
-.made-with-love a:hover {
-  text-decoration: underline;
-}
-
-
-/* for custom scrollbar for webkit browser*/
-
-::-webkit-scrollbar {
-    width: 6px;
-} 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-} 
-::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
 }
