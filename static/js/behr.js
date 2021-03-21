@@ -23497,15 +23497,16 @@ var json = [
 ];
 
 
-var tr;
+var tr,tr1;
 for (var i = 0; i < json.length; i++) {
-    tr = $('<tr id="addtr"/>').css("background-color",json[i].hex);
+    tr = $('<tr id="addtr" value=' + json[i] + '/>').val(json[i].hex).css("background-color",json[i].hex);
+	// tr1 = $('#addtr').val(json[i].hex);
     tr.append("<td>" + json[i].name + "</td>");
     tr.append("<td>" + json[i].label + "</td>");
     tr.append("<td>" + json[i].hex + "</td>"); 
-    $('table').append(tr);  
+    $('table').append(tr);
+	
   }
-
   function mySearch() {
     // Declare variables
     var input, filter, table, tr, td,td1,i;
@@ -23527,3 +23528,10 @@ for (var i = 0; i < json.length; i++) {
       }
     }
   }
+
+  // Add a "checked" symbol when clicking on a list item
+  $( 'tbody' ).on( 'click', 'td', function() {
+    $( this ).parent().toggleClass( 'is-selected' );
+});
+
+
