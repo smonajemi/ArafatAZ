@@ -13,9 +13,13 @@ const HTTPS_PORT = 4433;
 const ASSETS = "./assets/";
 const SSL_KEY_FILE = ASSETS + "server.key";
 const SSL_CRT_FILE = ASSETS + "server.crt";
+require('dotenv').config();
 const nodemailer = require("nodemailer");
 const request = require('request');
 require ('./controllers/connection.js');
+// get an environment variable
+const SMTP_USER = process.env.SMTP_USER;
+const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
 // const captcha = require('./routes/captcha.js');
 const https_options = {
     key: fs.readFileSync(__dirname + "/" + SSL_KEY_FILE),
@@ -54,7 +58,7 @@ app.post('/', (req, res) => {
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
-    const recaptcha = req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null;
+    //const recaptcha = req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null;
     const data = fname && lname && email && phone && message;  
     if(data === "") {
         return res.render("partials/contact.hbs", { errorMsg: "Error in one or more fields", title: 'Contact Me'});        
@@ -74,18 +78,18 @@ app.post('/', (req, res) => {
   });  
 setTimeout(() => {
 
-var admin = `contactsinamon@gmail.com`;
+var admin = `info@paint2go.ca`;
 var date = new Date();
 const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: "mail.name.com",
+        port: 587,
+        secure: false,
         auth: {
-            user: 'contactsinamon@gmail.com',
-            pass: 'qrqiuzxtzkrllmeb'
+            user: SMTP_USER,
+            pass: SMTP_PASSWORD, 
+          
         },
-        tls:{
-            rejectUnauthorized: false
-        }
 });    
     const emailAdmin = {
         from: req.body.email,
@@ -98,14 +102,14 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
 
     const emailSender = {
         from: req.body.email,
-        to: req.body.email,
+        to: admin,
         subject: `Thank You`,
         html: `<div style="text-align: center;text-transform:uppercase">
         <h4 style="color:#a08631;">Your message has been received</h4>
         </div> 
         <h5>Hi ${req.body.first_name},</h5>
 	    <h5>Thank you for reaching out! <br> I will get back to you soon.</h5>
-        <h5>Best, <br> SINA MONAJEMI <br> <a href="https://smonajemi.com">smonajemi.com</a></h5>
+        <h5>Best, <br> SINA MONAJEMI <br> www.paint2go.ca</h5>
         <hr>
         <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br> <div style="color:#709fb0; margin-left: 25px;">${req.body.message}</div></h5><br>
         <h5>Sent from: <br> ${fullname} <br> ${req.body.email}</h5>
@@ -165,6 +169,10 @@ app.get('/downloadResume', (req, res) => {
 app.get("*", (req,res) => {
     res.render('errorPage',{title: 'PAGE NOT FOUND'});
 })
+
+app.get("/contact", (req,res) => {
+    res.render('contact',{title: 'Contact'});
+});
 
 http.createServer(app).listen(HTTP_PORT, onHttpStart);
 https.createServer(https_options, app).listen(HTTPS_PORT, onHttpsStart);

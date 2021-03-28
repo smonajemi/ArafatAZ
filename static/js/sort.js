@@ -23499,7 +23499,7 @@ var json = [
 
 var tr,tr1;
 for (var i = 0; i < json.length; i++) {
-    tr = $('<tr id="addtr" value=' + json[i].name + '/>').val(json[i].hex).css("background-color",json[i].hex);
+    tr = $('<tr id="addtr" value=' + json[i] + '/>').val(json[i].hex).css("background-color",json[i].hex);
 	// tr1 = $('#addtr').val(json[i].hex);
     tr.append("<td>" + json[i].name + "</td>");
     tr.append("<td>" + json[i].label + "</td>");
@@ -23507,7 +23507,7 @@ for (var i = 0; i < json.length; i++) {
     $('table').append(tr);
 	
   }
-  function mySearch() {
+  function mySort() {
     // Declare variables
     var input, filter, table, tr, td,td1,i;
     input = document.getElementById("myInput");
