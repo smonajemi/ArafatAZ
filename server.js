@@ -102,7 +102,7 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
 
     const emailSender = {
         from: req.body.email,
-        to: admin,
+        to: req.body.email,
         subject: `Thank You`,
         html: `<div style="text-align: center;text-transform:uppercase">
         <h4 style="color:#a08631;">Your message has been received</h4>
