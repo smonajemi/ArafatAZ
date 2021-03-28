@@ -63,11 +63,11 @@ app.post('/', (req, res) => {
     if(data === "") {
         return res.render("partials/contact.hbs", { errorMsg: "Error in one or more fields", title: 'Contact Me'});        
     }
-    if(recaptcha) {
-        return res.render("partials/contact.hbs", { errorMsg: "You can't leave Captcha Code empty", title: 'Contact Me'});        
-    }
-    var secretKey = "6Lcj6XQaAAAAALoUExIxDrCPb0lK781UeoUnCmdZ";
-    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+    // if(recaptcha) {
+    //     return res.render("partials/contact.hbs", { errorMsg: "You can't leave Captcha Code empty", title: 'Contact Me'});        
+    // }
+    // var secretKey = "6Lcj6XQaAAAAALoUExIxDrCPb0lK781UeoUnCmdZ";
+    // var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
   
     request(verificationUrl,function(error,response,body) {
         body = JSON.parse(body);
