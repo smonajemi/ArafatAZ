@@ -90,6 +90,10 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
             pass: SMTP_PASSWORD, 
           
         },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false
+          }
 });    
     const emailAdmin = {
         from: req.body.email,
