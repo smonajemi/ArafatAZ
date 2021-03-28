@@ -83,8 +83,8 @@ var date = new Date();
 const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const transporter = nodemailer.createTransport({
         host: "mail.name.com",
-        port: 587,
-        secure: false,
+        port: 465,
+        secure: true,
         auth: {
             user: SMTP_USER,
             pass: SMTP_PASSWORD, 
