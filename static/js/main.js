@@ -32,17 +32,17 @@ $("#animate").on('click',function(){$('#animate').stop();
 
 
 
-(function ($) {
-  "use strict";
+// (function ($) {
+//   "use strict";
 
-  // Preloader (if the #preloader div exists)
-  $(window).on('load', function () {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function () {
-        $(this).remove();
-      });
-    }
-  });
+//   // Preloader (if the #preloader div exists)
+//   $(window).on('load', function () {
+//     if ($('#preloader').length) {
+//       $('#preloader').delay(100).fadeOut('slow', function () {
+//         $(this).remove();
+//       });
+//     }
+//   });
 
   // Back to top button
   $(window).scroll(function() {

@@ -120,32 +120,40 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         </div> `
     } 
 
-    const mailOption = [emailAdmin, emailSender];
-    var i = 1;
-    mailOption.forEach(e => {             
-        transporter.sendMail(e, (err) => {
-            var flag = Boolean(false);
-            while(!flag){   
-                if(err){
-                    console.log(`EMAIL COULD NOT BE SENT - ${err}`);
-                    flag = false;
-                    break;
-                }else{
-                    console.log( `Email ${i} sent successully.`);    
-                    flag = true;
+    // verify connection configuration
+transporter.verify(function(error, success) {
+    if (error) {
+      console.log(error);
+    } else {
+        const mailOption = [emailAdmin, emailSender];
+        var i = 1;
+        mailOption.forEach(e => {             
+            transporter.sendMail(e, (err) => {
+                var flag = Boolean(false);
+                while(!flag){   
+                    if(err){
+                        console.log(`EMAIL COULD NOT BE SENT - ${err}`);
+                        flag = false;
+                        break;
+                    }else{
+                        console.log( `Email ${i} sent successully.`);    
+                        flag = true;
+                    }
                 }
-            }
-            if(i == 2){
-                if(flag == false){                    
-                    res.send(`<h3>Oops... Error Sending Email!</h3><hr><br> <h5>${err}</h5>`);
-                }else{
-                    res.redirect('/thankyouPage');   
-                    exit = true;
+                if(i == 2){
+                    if(flag == false){                    
+                        res.send(`<h3>Oops... Error Sending Email!</h3><hr><br> <h5>${err}</h5>`);
+                    }else{
+                        res.redirect('/thankyouPage');   
+                        exit = true;
+                    }
                 }
-            }
-        i++;
-        });    
-    });  
+            i++;
+            });    
+        }); 
+    }
+  });
+    
 }, 2 * 1000);
 });
 
