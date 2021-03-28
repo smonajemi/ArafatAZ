@@ -69,13 +69,13 @@ app.post('/', (req, res) => {
     // var secretKey = "6Lcj6XQaAAAAALoUExIxDrCPb0lK781UeoUnCmdZ";
     // var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
   
-    request(verificationUrl,function(error,response,body) {
-        body = JSON.parse(body);
-        if(body.success !== undefined && !body.success) {
-            return false;
-        }
-    return true;
-  });  
+//     request(verificationUrl,function(error,response,body) {
+//         body = JSON.parse(body);
+//         if(body.success !== undefined && !body.success) {
+//             return false;
+//         }
+//     return true;
+//   });  
 setTimeout(() => {
 
 var admin = `info@paint2go.ca`;
