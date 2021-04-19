@@ -1,7 +1,4 @@
-# Author: SINA MONAJEMI - Portfolio
-# Framework: NODEJS
-# Platform: Heroku
-# Languages: JS,CSS,HBS
+#Paint2go
 
-
-www.smonajemi.com
+Paint2go Contractor - GTA
+www.paint2go.ca
