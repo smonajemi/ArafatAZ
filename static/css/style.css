@@ -1289,6 +1289,7 @@ h6 {
   padding: 8px 30px;
   color: #5B8899;
   transition: 0.3s;
+  margin-bottom: 5px;
 }
 .btn:hover{
   background: #F7CE76;
