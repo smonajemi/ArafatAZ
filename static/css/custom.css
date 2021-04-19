@@ -92,7 +92,3 @@ td {
 .is-selected td:nth-child(1),.is-selected td:nth-child(2),.is-selected td:nth-child(3){
   text-decoration: line-through;
 }
-
-textarea {
-  resize: none;
-}
