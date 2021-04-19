@@ -167,8 +167,27 @@ h6 {
   float:left;
   margin: 2px 10px;
   max-height: 100px;
-}
 
+}
+#animate{
+  position: relative;
+  animation: mymove 3s infinite;
+  animation-direction: alternate;
+}
+@keyframes mymove {
+  0% {
+  transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+  -webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+  transform: perspective(50px) rotateX(-360.1deg) rotateY(0deg);
+  -webkit-transform: perspective(50px) rotateX(0deg) rotateY(0deg);
+  } 100% {
+  transform: perspective(50px) rotateX(-360deg) rotateY(-79.9deg);
+  -webkit-transform: perspective(50px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+  from {left: 0%;}
+  to {left: 70%;}
+  }
 .main-pages {
   margin-top: 60px;
 }
@@ -1584,7 +1603,4 @@ h6 {
   }
 }
 
-#animate {
-  position: relative; 
-};
 }
