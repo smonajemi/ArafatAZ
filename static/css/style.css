@@ -1521,10 +1521,17 @@ h6 {
   #testimonials .testimonial-item p {
     margin-left: 0;
   }
+  .intro-info span{
+    font-size:28px;
+  }
+}
 
 @media (min-width: 992px) {
   #testimonials .testimonial-item p {
     width: 80%;
+  }
+  .intro-info span{
+    font-size:28px;
   }
 }
 
@@ -1559,11 +1566,17 @@ h6 {
   #why-us .card {
     margin: 0;
   }
+  .intro-info span{
+    font-size:28px;
+  }
 }
 
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
+  }
+  .intro-info span{
+    font-size:28px;
   }
 }
 
@@ -1595,6 +1608,9 @@ h6 {
   #testimonials .testimonial-item p {
     margin-left: 0;
   }
+  .intro-info span{
+    font-size:28px;
+  }
 }
 
 @media (max-width: 574px) {
@@ -1602,5 +1618,7 @@ h6 {
     padding: 100px 0 20px 0;
   }
 }
-
+.intro-info span{
+  font-size:28px;
 }
+
