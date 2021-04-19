@@ -1585,7 +1585,6 @@ h6 {
 }
 
 #animate {
-  position: relative;
- 
-}
-  
+  position: relative; 
+};
+
