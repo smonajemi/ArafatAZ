@@ -1227,6 +1227,7 @@ h6 {
   color: #fff;
   transition: 0.3s;
 }
+
 #addText{
   border: 2;
   border-radius: 300px;
@@ -1458,6 +1459,20 @@ h6 {
   text-align: center;
   color: #fff;
   transition: 0.3s;
+  cursor: pointer;
+}
+label{
+  float:right;
+  background: #4da703;
+  border: 0;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+label:hover {
+  background: #F7CE76;
   cursor: pointer;
 }
 #footer .footer-top .footer-newsletter input[type="button"] {
