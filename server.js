@@ -25,7 +25,7 @@ const Image = require ('./models/image');
 // require ('./controllers/UserController.js');
 const filestorage = multer.diskStorage({
     destination: (req, file,cb) => {
-        cb(null, './uploads');
+        cb(null, './upload');
     }, filename:   (req, file, cb) => {
             const ext = path.extname(file.originalname);
             const id = uuid();
@@ -77,6 +77,7 @@ app.post('/', (req, res) => {
     upload(req, res, function(e){
         if(e){
            console.log("error");
+           res.render('index',{title: 'PAINT2GO'});
         } else {
             console.log(req.files);
             // for(var i=0; i<req.files.length; i++){
@@ -87,6 +88,7 @@ app.post('/', (req, res) => {
         const attachments = files.map((file)=>{
         return { filename: file.originalname, path: file.path };
         });
+  
     console.log(attachments);
     const fname = req.body.first_name;
     const lname = req.body.last_name;
