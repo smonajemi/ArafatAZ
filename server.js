@@ -16,17 +16,26 @@ const ASSETS = "./assets/";
 const SSL_KEY_FILE = ASSETS + "server.key";
 const SSL_CRT_FILE = ASSETS + "server.crt";
 require('dotenv').config();
+require('./controllers/connection');
 const nodemailer = require("nodemailer");
 const multer = require('multer');
 const uuid = require('uuid').v4;
+const Image = require ('./models/image');
+
+// require ('./controllers/UserController.js');
 const filestorage = multer.diskStorage({
     destination: (req, file,cb) => {
         cb(null, './uploads');
     }, filename:   (req, file, cb) => {
-            const {originalname} = file;
-            cb(null,file.fieldname + "__" + `${uuid()}-${originalname}`);
+            const ext = path.extname(file.originalname);
+            const id = uuid();
+            const filePath = `images/${id}${ext}`;
+            Image.create({ filePath }) 
+                .then(() => {
+                    cb(null,filePath);
+                });
     }
-})
+});
 const upload = multer({storage: filestorage}).array('image');
 // get an environment variable
 const SMTP_USER = process.env.SMTP_USER;

@@ -1,5 +1,5 @@
 const { response } = require('express');
-const User = require('../models/User.js');
+const User = require('../models/image.js');
 const bcrypt = require('bcryptjs');
 
 const findUser = (req,res,next) => {
