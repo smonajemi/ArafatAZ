@@ -4,6 +4,8 @@ const exphbs = require('express-handlebars');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 const clientSessions = require("client-sessions");
 const fs = require("fs");
 const http = require("http");
@@ -15,8 +17,17 @@ const SSL_KEY_FILE = ASSETS + "server.key";
 const SSL_CRT_FILE = ASSETS + "server.crt";
 require('dotenv').config();
 const nodemailer = require("nodemailer");
-const request = require('request');
-require ('./controllers/connection.js');
+const multer = require('multer');
+const uuid = require('uuid').v4;
+const filestorage = multer.diskStorage({
+    destination: (req, file,cb) => {
+        cb(null, './uploads');
+    }, filename:   (req, file, cb) => {
+            const {originalname} = file;
+            cb(null,file.fieldname + "__" + `${uuid()}-${originalname}`);
+    }
+})
+const upload = multer({storage: filestorage}).array('image');
 // get an environment variable
 const SMTP_USER = process.env.SMTP_USER;
 const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
@@ -32,8 +43,7 @@ layoutsDir: path.join(__dirname, 'views/layouts'),
 partialsDir: __dirname + '/views/partials'
  }));
 app.set('view engine', '.hbs');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+
 // app.use('/', captcha);
 app.use(express.static('static'));
 app.use(clientSessions({
@@ -53,11 +63,28 @@ app.get('/colors',(req,res) => {
 });
 
 app.post('/', (req, res) => {
+    let arr = [];
+    let obj = {};
+    upload(req, res, function(e){
+        if(e){
+           console.log("error");
+        } else {
+            console.log(req.files);
+            // for(var i=0; i<req.files.length; i++){
+            //   obj["filepath"] = req.files[i].path;
+            //   arr.push(obj);
+            // }
+        const files = req.files;
+        const attachments = files.map((file)=>{
+        return { filename: file.originalname, path: file.path };
+        });
+    console.log(attachments);
     const fname = req.body.first_name;
     const lname = req.body.last_name;
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
+
     //const recaptcha = req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null;
     const data = fname && lname && email && phone && message;  
     if(data === "") {
@@ -101,7 +128,8 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         subject: `${fullname}`,
         html: `<div style="text-align: center;text-transform:uppercase"><h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3></div> <br>
                 <b><p><a style="color:red;"> "</a> ${req.body.message} <a style="color:red;"> "</a></b><br><hr><br><i>${fullname} <br> ${req.body.phone}<br>
-                ${req.body.email}</i></p> <br><br> ${date}`
+                ${req.body.email}</i></p> <br><br> ${date}`,
+        attachments:attachments
     }    
 
     const emailSender = {
@@ -117,7 +145,8 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         <hr>
         <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br> <div style="color:#709fb0; margin-left: 25px;">${req.body.message}</div></h5><br>
         <h5>Sent from: <br> ${fullname} <br> ${req.body.email}</h5>
-        </div> `
+        </div> `,
+        attachments:attachments
     } 
 
     // verify connection configuration
@@ -136,7 +165,7 @@ transporter.verify(function(error, success) {
                         flag = false;
                         break;
                     }else{
-                        console.log( `Email ${i} sent successully.`);    
+                        console.log( `Email ${i} sent successully.`);
                         flag = true;
                     }
                 }
@@ -155,8 +184,9 @@ transporter.verify(function(error, success) {
   });
     
 }, 2 * 1000);
+}
 });
-
+});
 
 // Admin
 app.get('/admin',(req,res) => {

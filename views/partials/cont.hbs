@@ -17,7 +17,7 @@
           <div class="col-lg-6">          
             <hr>
             <div class="form">
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="" method="post" role="form" class="contactForm" enctype="multipart/form-data">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required/>
@@ -45,8 +45,8 @@
                 <div class="text-left">
                     <button type="reset" class="btn">Clear</button>
                     <button type="submit" id="submit" class="btn">Send</button>
-                    {{!-- <input type="file" id="upload" hidden/>
-                    <label for="upload">Upload</label> --}}
+                    <label for="upload">Upload</label>
+                    <input type="file" id="upload" name="image" multiple hidden/>
                     <hr>
                     {{!-- <input type="button" class="btn" id="add" name="add"onclick="addText()" value="Add Color Code"></input>
                     <input type="delete" class="btn" id="remove" name="remove"onclick="removeText()" value="Delete"></input> --}}
@@ -58,6 +58,10 @@
                  {{!-- <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lcj6XQaAAAAAI0s9ja70-abMFJy-LCUOjP2S5uh"></div>
                  <span id="captcha" style="float:left;color:red" /> --}}
               </form>
+              {{!-- <form action="/upload" method="post">
+                 
+                   <button>submit</button>
+              </form> --}}
             </div>
           </div>
 
