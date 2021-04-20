@@ -3,7 +3,7 @@
 
   $(function() {
     typed.typed({
-      strings: ["painting"],
+      strings: ["painting","ceiling"],
       typeSpeed: 150,
       loop: true,
     });
