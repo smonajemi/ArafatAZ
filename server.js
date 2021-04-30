@@ -120,13 +120,12 @@ var admin = `info@paint2go.ca`;
 var date = new Date();
 const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const transporter = nodemailer.createTransport({
-        host: "mail.name.com",
-        port: 465,
-        secure: true,
+        host: "smtp.office365.com",  
+        secureConnection: true,
+        port: 587,
         auth: {
             user: SMTP_USER,
-            pass: SMTP_PASSWORD, 
-          
+            pass: SMTP_PASSWORD,          
         },
         tls: {
             // do not fail on invalid certs
