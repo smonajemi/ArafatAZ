@@ -16,7 +16,7 @@ const ASSETS = "./assets/";
 const SSL_KEY_FILE = ASSETS + "server.key";
 const SSL_CRT_FILE = ASSETS + "server.crt";
 require('dotenv').config();
-require('./controllers/connection');
+// require('./controllers/connection');
 const nodemailer = require("nodemailer");
 const multer = require('multer');
 const uuid = require('uuid').v4;
@@ -95,6 +95,7 @@ app.post('/', (req, res) => {
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
+    var admin = `info@paint2go.ca`;
 
     //const recaptcha = req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null;
     const data = fname && lname && email && phone && message;  
@@ -116,16 +117,22 @@ app.post('/', (req, res) => {
 //   });  
 setTimeout(() => {
 
-var admin = `info@paint2go.ca`;
+
 var date = new Date();
 const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const transporter = nodemailer.createTransport({
-        host: "smtp.office365.com",  
-        secureConnection: true,
-        port: 587,
+        host: "smtpout.secureserver.net",  
+        secure: true,
+        secureConnection: false, // TLS requires secureConnection to be false
+        tls: {
+            ciphers:'SSLv3'
+        },
+        requireTLS:true,
+        port: 465,
+        debug: true,
         auth: {
             user: SMTP_USER,
-            pass: SMTP_PASSWORD,          
+            pass: SMTP_PASSWORD,         
         },
         tls: {
             // do not fail on invalid certs
@@ -133,7 +140,7 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
           }
 });    
     const emailAdmin = {
-        from: req.body.email,
+        from: email,
         to: admin,
         subject: `${fullname}`,
         html: `<div style="text-align: center;text-transform:uppercase"><h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3></div> <br>
@@ -143,8 +150,8 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     }    
 
     const emailSender = {
-        from: req.body.email,
-        to: req.body.email,
+        from: admin,
+        to: email,
         subject: `Thank You`,
         html: `<div style="text-align: center;text-transform:uppercase">
         <h4 style="color:#a08631;">Your message has been received</h4>
