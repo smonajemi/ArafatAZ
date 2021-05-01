@@ -140,7 +140,7 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         from: email,
         to: admin,
         subject: `${fullname}`,
-        html: `<div style="text-align: center;text-transform:uppercase"><h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3></div> <br>
+        html: `<div style="text-transform:uppercase"><h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3></div> <br>
                 <b><p><a style="color:red;"> "</a> ${req.body.message} <a style="color:red;"> "</a></b><br><hr><br><i>${fullname} <br> ${req.body.phone}<br>
                 ${req.body.email}</i></p> <br><br> ${date}`,
         attachments:attachments
@@ -149,15 +149,15 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const emailSender = {
         from: admin,
         to: email,
-        subject: `Thank You`,
-        html: `<div style="text-align: center;text-transform:uppercase">
-        <h4 style="color:#a08631;">Your message has been received</h4>
-        </div> 
+        subject: `<div style="text-transform:uppercase">Thank You:Your message has been received</div>`,
+        html: `        
         <h5>Hi ${req.body.first_name},</h5>
 	    <h5>Thank you for reaching out! <br> I will get back to you soon.</h5>
         <h5>Best, <br> Ali <br> www.paint2go.ca</h5>
         <hr>
-        <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br> <div style="color:#709fb0; margin-left: 25px;">${req.body.message}</div></h5><br>
+        <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br>
+        <div style="text-decoration: underline;text-decoration-style:dotted;">
+        <br>${req.body.message}</div></h5><br>
         <h5>Sent from: <br> ${fullname} <br> ${req.body.email}</h5>
         </div> `,
         attachments:attachments
