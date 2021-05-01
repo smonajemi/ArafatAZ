@@ -185,7 +185,9 @@ transporter.verify(function(error, success) {
                 }
                 if(i == 2){
                     if(flag == false){                    
-                        res.send(`<h3>Oops... Error Sending Email!</h3><hr><br> <h5>${err}</h5>`);
+                        res.send(`<h2>Oops... Error Sending Email!</h2><br><h5>${err}</h5><hr><br> <h3>It seems very having a problem with our mailing system. Please click <a href="mailto:info@paint2go.ca">HERE</a> to email us directly!<br><br>Thank you for your patience.</h3>
+                                    
+                        `);
                     }else{
                         res.redirect('/thankyouPage');   
                         exit = true;
