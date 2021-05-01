@@ -123,10 +123,7 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
     const transporter = nodemailer.createTransport({
         host: "smtpout.secureserver.net",  
         secure: true,
-        secureConnection: false, // TLS requires secureConnection to be false
-        tls: {
-            ciphers:'SSLv3'
-        },
+        secureConnection: true, // TLS requires secureConnection to be false
         requireTLS:true,
         port: 465,
         debug: true,
