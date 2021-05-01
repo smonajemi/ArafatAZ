@@ -140,7 +140,7 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         from: email,
         to: admin,
         subject: `${fullname}`,
-        html: `<div style="text-transform:uppercase"><h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3></div> <br>
+        html: `<h3>NEW MESSAGE FROM <a style="color:red;">${fullname}</a></h3><br>
                 <b><p><a style="color:red;"> "</a> ${req.body.message} <a style="color:red;"> "</a></b><br><hr><br><i>${fullname} <br> ${req.body.phone}<br>
                 ${req.body.email}</i></p> <br><br> ${date}`,
         attachments:attachments
@@ -156,7 +156,8 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         <h5>Best, <br> Ali <br> www.paint2go.ca</h5>
         <hr>
         <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br>
-        <div style="text-decoration: underline;text-decoration-style:dotted;">
+        <div style="text-decoration: underline;
+        text-decoration-style:dotted;">
         <br>${req.body.message}</div></h5><br>
         <h5>Sent from: <br> ${fullname} <br> ${req.body.email}</h5>
         </div> `,
