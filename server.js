@@ -152,8 +152,8 @@ const fullname = (req.body.first_name + " " + req.body.last_name).toUpperCase();
         subject: `THANK YOU: YOU ARE MESSAGE HAS BEEN RECEIVED!`,
         html: `        
         <h5>Hi ${req.body.first_name},</h5>
-	    <h5>Thank you for reaching out! <br> I will get back to you soon.</h5>
-        <h5>Best, <br> Ali <br> www.paint2go.ca</h5>
+	    <h5>Thanks for reaching out.<br></h5>
+        <h5>I'll be in touch soon, <br> Ali <br> www.paint2go.ca<br>+1-647-986-2329</h5>
         <hr>
         <div style="text-align:left;"><h5 style="text-transform:uppercase">Your message: <br>
         <div style="text-decoration: underline;
