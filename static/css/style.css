@@ -8,11 +8,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: #fff;
   color: #5B8899;
   font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 *:focus {
   outline:none; 
@@ -21,6 +25,7 @@ body {
 a {
   color: #2d3758;
   transition: 0.5s;
+  scroll-behavior: smooth;
 }
 
 a:hover,
