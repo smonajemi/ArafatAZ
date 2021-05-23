@@ -73,7 +73,7 @@ app.get('/colors',(req,res) => {
 });
 
 app.post('/', (req, res) => {
-    // var secretKey = "6LcuC-UaAAAAAMbcsCQDwR424yq3QI2XiCtG5Bpj";
+    // var secretKey = "";
     // var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
    
     // request(verificationUrl,function(error,response,body) {
