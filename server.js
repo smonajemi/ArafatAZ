@@ -10,6 +10,7 @@ const clientSessions = require("client-sessions");
 const fs = require("fs");
 const http = require("http");
 const https = require("https");
+const request = require('request');
 const HTTP_PORT = process.env.PORT || 8080;
 const HTTPS_PORT = 4433;
 const ASSETS = "./assets/";
@@ -72,6 +73,16 @@ app.get('/colors',(req,res) => {
 });
 
 app.post('/', (req, res) => {
+    // var secretKey = "6LcuC-UaAAAAAMbcsCQDwR424yq3QI2XiCtG5Bpj";
+    // var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+   
+    // request(verificationUrl,function(error,response,body) {
+    //     body = JSON.parse(body);
+    //     if(body.success !== undefined && !body.success) {
+    //         return false;
+    //     }
+    //     return true;
+    // });
     let arr = [];
     let obj = {};
     upload(req, res, function(e){

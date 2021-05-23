@@ -16,8 +16,9 @@
           </div> 
           <div class="col-lg-6">          
             <hr>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
             <div class="form">
-              <form action="" method="post" role="form" class="contactForm" enctype="multipart/form-data">
+              <form action="" method="post" role="form" class="contactForm" enctype="multipart/form-data" id="comment_form">
                 <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required/>
@@ -42,6 +43,14 @@
                   <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
+
+                <div class="form-group">
+                  <div class="addNew" role="alert" id="add">
+                  <strong style="padding-right: 10px;" id="addNewtx"></strong>
+                  </div> 
+                  {{!-- <div class="g-recaptcha" data-sitekey="6LcuC-UaAAAAAKt2SrrZDfH4iNr4VYujkITCdSqV"></div><br> --}}
+                  <span id="captcha" style="float:left;color:red" />
+                </div>
                 <div class="text-left">
                     <button type="reset" class="btn">Clear</button>
                     <button type="submit" id="submit" class="btn">Send</button>
@@ -55,8 +64,7 @@
                     {{!-- <ol id="addText" value=''></ol> --}}
                     <br>
                 </div>
-                 {{!-- <div class="g-recaptcha" id="rcaptcha" data-sitekey="6Lcj6XQaAAAAAI0s9ja70-abMFJy-LCUOjP2S5uh"></div>
-                 <span id="captcha" style="float:left;color:red" /> --}}
+              
               </form>
               {{!-- <form action="/upload" method="post">
                  
@@ -69,3 +77,18 @@
 
       </div>
     </section>
+  <script>
+     $(document).ready(function() {
+      $('#comment_form').submit(function() {
+        $(this).ajaxSubmit({
+          error: function(xhr) {
+            status('Error: ' + xhr.status);
+          },
+         success: function(response) {
+          console.log(response);
+         }
+        });
+        return false;
+      });
+    });
+  </script>
